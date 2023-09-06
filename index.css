@@ -46,35 +46,18 @@ body, html {
 }
 
 
-
 /* Set core body defaults */
 body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.65;
   padding: 8px 2rem 2rem 2rem;
-  background-color: #f5f2f7;
+  background-color: #faaf40;
 }
 
 body {
-  background: linear-gradient(-45deg, #f68433, #e6a95e, #dbab70, #f7f7f7);
   background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
   height: 100vh;
-}
-
-@keyframes gradient {
-  0% {
-      background-position: 0% 50%;
-  }
-
-  50% {
-      background-position: 100% 50%;
-  }
-
-  100% {
-      background-position: 0% 50%;
-  }
 }
 
 img {
@@ -261,11 +244,11 @@ body > ul {
   border: 10px black;
   text-align: center;
   border-radius: 6px;
-  padding: 8px 0;
+  padding: 0px 0;
   position: absolute;
   z-index: 1;
   bottom: 125%;
-  left: 50%;
+  left: 35%;
   margin-left: -80px;
 }
 
@@ -406,7 +389,7 @@ body > ul {
       position: absolute;
       bottom: 8px;
       left: 16px;
-      font-size: 1.5vw;
+      font-size: 1.4vw;
       color: white;
       font-family: 'Arvo', serif;
     }
@@ -454,7 +437,7 @@ body > ul {
       color: white;
     }
 
-    /*Formatting for About the Company*/
+    /*Formatting for About the Company and State License*/
     .container {
       align-items: center;
       justify-content: center;
@@ -463,14 +446,14 @@ body > ul {
 
     .text {
       text-align: left;
-      float: left;
       padding: 0px 70px 0px 70px;
+      position: relative;
     }
 
     #profileimg {
       border-radius: 50%;
-      float: left;
       padding: 0px 20px 20px 20px;
+      align-items: center;
     }
 
     /*Formatting the footer*/
@@ -523,6 +506,10 @@ body > ul {
     
       .footer {
         position: unset;
+      }
+
+      .container {
+        display: grid;
       }
     }
     
