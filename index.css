@@ -46,6 +46,15 @@ body, html {
 }
 
 
+.hero-text h1 {
+  font-size: 5.5vw;
+}
+
+.hero-text h2 {
+  font-size: 3vw;
+}
+
+
 /* Set core body defaults */
 body {
   min-height: 100vh;
@@ -58,6 +67,10 @@ body {
 body {
   background-size: 400% 400%;
   height: 100vh;
+}
+
+h2 {
+  font-size: 4vw;
 }
 
 img {
@@ -74,10 +87,12 @@ img {
 
 .marquee h4 {
     position: absolute;
+    font-size: 2.2vw;
     width: 100%;
     height: 100%;
     margin: 0;
     line-height: 50px;
+    padding-bottom: 5px;
     text-align: center;
     -moz-transform: translateX(100%);
     -webkit-transform: translateX(100%);
@@ -200,7 +215,7 @@ body > ul {
 
 [class*="smol"]:not([data-component]) > *:not([data-unstyled]) {
   display: grid;
-  padding: 1rem;
+
   background-color: #E0D4F6;
   color: #675883;
   /*font-size: clamp(1.5rem, 4vw, 2rem);
@@ -453,7 +468,11 @@ body > ul {
     #profileimg {
       border-radius: 50%;
       padding: 0px 20px 20px 20px;
-      align-items: center;
+      justify-content: center;
+    }
+
+    .centerimg {
+      text-align: center;
     }
 
     /*Formatting the footer*/
@@ -508,9 +527,35 @@ body > ul {
         position: unset;
       }
 
+      h2 {
+        font-size: 6vw;
+        padding-bottom: 15px;
+      }
+
       .container {
         display: grid;
       }
+
+      .smol-css-grid {
+        grid-template-columns: auto;
+      }
+
+      .hero-text h1 {
+        font-size: 8vw;
+      }
+
+      .hero-text h2 {
+        font-size: 4vw;
+      }
+
+      .marquee h4 {
+        font-size: 3.5vw;
+      }
+
+      .bottomleft {
+        font-size: 2vw;
+      }
+
     }
     
     @media (min-width: 768px) and (max-width: 1024px) {
