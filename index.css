@@ -1,0 +1,554 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+header,
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+body, html {
+  height: 100%;
+}
+
+/* The banner at the top */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Banner.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border-radius: 0.5rem;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+.hero-text h1 {
+  font-size: 5.5vw;
+}
+
+.hero-text h2 {
+  font-size: 3vw;
+}
+
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.65;
+  padding: 8px 2rem 2rem 2rem;
+  background-color: #94e7fc;
+}
+
+body {
+  background-size: 400% 400%;
+  height: 100vh;
+}
+
+h2 {
+  font-size: 4vw;
+}
+
+h3 {
+  font-size: 2vw;
+}
+
+img {
+    width: 100%;
+    height: 100%;
+  }
+
+  /*Scrolling Marquee*/
+  .marquee {
+    height: 50px;
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee h4 {
+    position: absolute;
+    font-size: 2.2vw;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    padding-bottom: 5px;
+    text-align: center;
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(100%);
+    -moz-animation: scroll-left 2s linear infinite;
+    -webkit-animation: scroll-left 2s linear infinite;
+    animation: scroll-left 20s linear infinite;
+}
+
+@-moz-keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+    }
+}
+
+@-webkit-keyframes scroll-left {
+    0% {
+        -webkit-transform: translateX(100%);
+    }
+    100% {
+        -webkit-transform: translateX(-100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        -moz-transform: translateX(100%);
+        -webkit-transform: translateX(100%);
+        transform: translateX(100%);
+    }
+    100% {
+        -moz-transform: translateX(-100%);
+        -webkit-transform: translateX(-100%);
+        transform: translateX(-100%);
+    }
+}
+/***
+ 🟣 SmolCSS Snippet Styles
+ */
+.smol-css-grid {
+  --min: 20ch;
+  --gap: 1rem;
+
+  display: grid;
+  grid-gap: var(--gap);
+  grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
+}
+
+.smol-card-component {
+ /*--img-ratio: 3/2;
+*/
+  display: flex;
+  flex-direction: column;
+  /* Supported for flexbox in modern browsers since April 2021 */
+  gap: 1rem;
+  box-shadow: 0 0 0.5rem rgba(0, 0, 0, 0.35);
+  border-radius: 0.5rem;
+  background-color: rgb(207, 249, 252);
+}
+
+.smol-card-component:hover {
+  background-color: rgb(255, 255, 255);
+}
+
+.smol-card-component > img {
+  aspect-ratio: var(--img-ratio);
+  object-fit: cover;
+  width: 100%;
+}
+
+.smol-card-component > img:first-child {
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.smol-card-component > img:last-child {
+  border-radius: 0 0 0.5rem 0.5rem;
+  margin-top: auto;
+}
+
+.smol-card-component > :not(img) {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+.smol-card-component > :not(img):first-child {
+  margin-top: 1rem;
+}
+
+
+
+/* Enhanced `:not()` accepts a selector list,
+but as a fallback you can chain `:not()` instead */
+.smol-card-component > :last-of-type:not(img, h2, h3, h4) {
+  margin-bottom: 1rem;
+}
+
+.smol-card-component > :not(h2, h3, h4) {
+  font-size: 0.9rem;
+}
+
+.smol-card-component > a {
+  align-self: start;
+}
+
+
+
+/* Additional demo styles from SmolCSS.dev
+   Not all styles may be needed for this pen */
+body > ul {
+  list-style: none;
+  margin: 0;
+
+  &:not([data-padding-unset]) {
+    padding: 0;
+  }
+}
+
+[class*="smol"]:not([data-component]) > *:not([data-unstyled]) {
+  display: grid;
+
+  background-color: #E0D4F6;
+  color: #675883;
+  /*font-size: clamp(1.5rem, 4vw, 2rem);
+  */
+  font-weight: bold;
+  text-align: center;
+  border-radius: 0.15em;
+  border: 1px dashed;
+
+  &:not([data-text]) {
+    place-content: center;
+  }
+
+  &[data-text] {
+    font-size: 1.15rem;
+    text-align: left;
+  }
+}
+
+[data-container-style] {
+  outline: 2px dotted #29344B;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {opacity: 0;} 
+  to {opacity: 1;}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity:1 ;}
+}
+
+/*Button Specifications*/
+.frame {
+    width: 90%;
+    margin: 10px auto;
+    text-align: center;
+  }
+  button {
+    margin: 20px;
+  }
+  .custom-btn {
+    width: 130px;
+    height: 40px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 1px 2px;
+    font-family: 'Arvo', serif;
+    font-weight: 500;
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    display: inline-block;
+     box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+     7px 7px 20px 0px rgba(0,0,0,.1),
+     4px 4px 5px 0px rgba(0,0,0,.1);
+    outline: none;
+  }
+
+/*Button Animation*/
+.btn-7 {
+    background: linear-gradient(0deg, rgb(159, 218, 254) 0%, rgb(2, 205, 236) 100%);
+      line-height: 42px;
+      padding: 0;
+      border: none;
+    }
+    .btn-7 span {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+    }
+    .btn-7:before,
+    .btn-7:after {
+      position: absolute;
+      content: "";
+      right: 0;
+      bottom: 0;
+      background: rgb(2, 218, 251);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7:before{
+       height: 0%;
+       width: 2px;
+    }
+    .btn-7:after {
+      width: 0%;
+      height: 2px;
+    }
+    .btn-7:hover{
+      color: rgb(2, 205, 236);
+      background: transparent;
+    }
+    .btn-7:hover:before {
+      height: 100%;
+    }
+    .btn-7:hover:after {
+      width: 100%;
+    }
+    .btn-7 span:before,
+    .btn-7 span:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      top: 0;
+      background: rgb(2, 205, 236);
+      box-shadow:
+       -7px -7px 20px 0px rgba(255,255,255,.9),
+       -4px -4px 5px 0px rgba(255,255,255,.9),
+       7px 7px 20px 0px rgba(0,0,0,.2),
+       4px 4px 5px 0px rgba(0,0,0,.3);
+      transition: all 0.3s ease;
+    }
+    .btn-7 span:before {
+      width: 2px;
+      height: 0%;
+    }
+    .btn-7 span:after {
+      height: 2px;
+      width: 0%;
+    }
+    .btn-7 span:hover:before {
+      height: 100%;
+    }
+    .btn-7 span:hover:after {
+      width: 100%;
+    }
+    
+    /*Put something in the bottomleft corner*/
+    .bottomleft {
+      position: absolute;
+      bottom: 8px;
+      left: 16px;
+      font-size: 1.4vw;
+      color: white;
+      font-family: 'Arvo', serif;
+    }
+
+    .bottomright {
+      position: absolute;
+      bottom: 4px;
+      right: 8px;
+    }
+
+    /*Styling for p*/
+    p.ex1 {
+      margin: 0px 30px 0px;
+      font-size: medium;
+    }
+
+    .ex2 {
+      font-size: 1.25vw;
+    }
+
+    /*Icons*/
+    .fa {
+      padding: 10px;
+      font-size: 15px;
+      width: 33px;
+      text-align: center;
+      text-decoration: none;
+      margin: 5px 2px;
+      border-radius: 10%;
+      float: right;
+    }
+    
+    .fa:hover {
+        opacity: 0.7;
+    }
+    
+    .fa-facebook {
+      background: #3B5998;
+      color: white;
+    }
+
+    .fa-instagram {
+      background: #eb088c;
+      color: white;
+    }
+
+    /*Formatting for About the Company and State License*/
+    .container {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    .text {
+      text-align: left;
+      padding: 0px 70px 0px 70px;
+      position: relative;
+    }
+
+    #profileimg {
+      border-radius: 25%;
+      padding: 0px 20px 20px 20px;
+      justify-content: center;
+    }
+
+    .centerimg {
+      text-align: center;
+    }
+
+    /*Class for bullet points*/
+    .bulletpts {
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bulletpts .content {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 1.5rem;
+    }
+
+    /*Formatting the footer*/
+    .footer {
+      background-color: rgb(73, 149, 197);
+      color: #fefefe;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+    
+    .footer .heading {
+      color: #fefefe;
+      max-width: 1010px;
+      width: 90%;
+      text-transform: uppercase;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+    }
+    
+    .footer .content {
+      display: flex;
+      justify-content: space-evenly;
+      margin: 1.5rem;
+    }
+    
+    .footer .content p {
+      margin-bottom: 0.8rem;
+      text-decoration: none;
+      color: #fefefe;
+      font-size: 15px;
+    }
+    
+    .footer .content h4 {
+      margin-bottom: 1.3rem;
+      font-size: 25px;
+    }
+    
+    footer {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    
+    @media (max-width: 767px) {
+      .footer .content {
+        display: flex;
+        flex-direction: column;
+        font-size: 14px;
+      }
+    
+      .footer {
+        position: unset;
+      }
+
+      h2 {
+        font-size: 6vw;
+        padding-bottom: 15px;
+      }
+
+      h3 {
+        font-size: 5vw;
+      }
+
+      .ex2 {
+        font-size: 3vw;
+      }
+
+      .bulletpts .content {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        display: grid;
+      }
+
+      .smol-css-grid {
+        grid-template-columns: auto;
+      }
+
+      .hero-text h1 {
+        font-size: 8vw;
+      }
+
+      .hero-text h2 {
+        font-size: 4vw;
+      }
+
+      .marquee h4 {
+        font-size: 3.5vw;
+      }
+
+      .bottomleft {
+        font-size: 2vw;
+      }
+
+    }
+    
+    @media (min-width: 768px) and (max-width: 1024px) {
+      .footer .content,
+      .footer {
+        font-size: 14px;
+      }
+    }
+    
+    @media (orientation: landscape) and (max-height: 500px) {
+      .footer {
+        position: unset;
+      }
+    }
