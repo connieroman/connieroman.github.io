@@ -24,7 +24,7 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.65;
     padding: 8px 2rem 2rem 2rem;
-    background-color: #94e7fc;
+    background-color: white;
   }
 
   h1 {
@@ -33,6 +33,7 @@ body {
 
   h2 {
     font-size: 2.5vw;
+    text-align: left;
   }
 
   .btn {
@@ -164,7 +165,7 @@ body {
   
       .text {
         text-align: left;
-        padding: 0px 70px 0px 70px;
+        padding: 0px 0px 0px 0px;
         position: relative;
       }
   
@@ -225,6 +226,10 @@ body {
           flex-direction: column;
           font-size: 14px;
         }
+
+        .footer .heading {
+          margin-bottom: 0px;
+        }
       
         .footer {
           position: unset;
@@ -235,7 +240,7 @@ body {
         }
 
         h2 {
-          font-size: 4vw;
+          font-size: 5vw;
           padding-bottom: 15px;
         }
   
@@ -245,6 +250,7 @@ body {
 
         section {
           margin-bottom: 15px;
+          padding: 0px;
         }
 
         .btn {
