@@ -22,10 +22,10 @@ body, html {
 /* The banner at the top */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Banner_Connie.jpg");
+  background: radial-gradient(1000px circle at center 100px, transparent, rgb(0, 0, 0, 0.7)), url("Banner_Connie.jpg");
 
   /* Set a specific height */
-  height: 50%;
+  height: 60%;
 
   /* Position and center the image to scale nicely on all screens */
   background-position: center;
@@ -206,9 +206,7 @@ body > ul {
     margin: 10px auto;
     text-align: center;
   }
-  button {
-    margin: 20px;
-  }
+
   .custom-btn {
     width: 130px;
     height: 40px;
@@ -477,16 +475,22 @@ body > ul {
         grid-template-columns: auto;
       }
 
+      .hero-image{
+        background: radial-gradient(350px circle at center 150px, transparent, rgb(0, 0, 0, 0.7)), url("Banner_Connie.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        border-radius: 0.5rem;
+      }
+
       .hero-text h1 {
         font-size: 8vw;
       }
 
       .hero-text h2 {
-        font-size: 4vw;
-      }
-
-      .marquee h4 {
-        font-size: 3.5vw;
+        font-size: 5vw;
+        margin-top: 10px;
       }
 
       .bottomleft {
