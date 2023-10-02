@@ -22,13 +22,13 @@ body, html {
 /* The banner at the top */
 .hero-image {
   /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
-  background: radial-gradient(1000px circle at center 100px, transparent, rgb(0, 0, 0, 0.7)), url("Banner_Connie.jpg");
+  background: radial-gradient(1000px circle at center 150px, transparent, rgb(0, 0, 0, 0.7)), url("Banner_Connie.jpg");
 
   /* Set a specific height */
-  height: 60%;
+  height: 70%;
 
   /* Position and center the image to scale nicely on all screens */
-  background-position: center;
+  background-position: top;
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
@@ -39,7 +39,7 @@ body, html {
 .hero-text {
   text-align: center;
   position: relative;
-  top: 50%;
+  top: 78%;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
@@ -47,7 +47,7 @@ body, html {
 
 
 .hero-text h1 {
-  font-size: 5.5vw;
+  font-size: 5vw;
 }
 
 .hero-text h2 {
@@ -476,16 +476,27 @@ body > ul {
       }
 
       .hero-image{
-        background: radial-gradient(350px circle at center 150px, transparent, rgb(0, 0, 0, 0.7)), url("Banner_Connie.jpg");
+        background: radial-gradient(350px circle at center 75px, transparent, rgb(0, 0, 0, 0.7)), url("Banner_Connie.jpg");
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         position: relative;
         border-radius: 0.5rem;
+        width: 100%;
+        height: 30%;
       }
 
+      .hero-text {
+        text-align: center;
+        position: relative;
+        top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+      }      
+
       .hero-text h1 {
-        font-size: 8vw;
+        font-size: 4vw;
       }
 
       .hero-text h2 {
