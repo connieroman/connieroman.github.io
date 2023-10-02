@@ -168,6 +168,10 @@ body {
         padding: 0px 0px 0px 0px;
         position: relative;
       }
+
+      .spacing {
+        margin-left: 20px;
+      }
   
       #profileimg {
         border-radius: 50%;
@@ -246,6 +250,10 @@ body {
   
         .container {
           display: grid;
+        }
+
+        .spacing {
+          margin-left: 0px;
         }
       }
       
