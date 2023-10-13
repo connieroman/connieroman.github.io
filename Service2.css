@@ -159,7 +159,6 @@ body {
       /*Formatting for content on page*/
       .container {
         align-items: center;
-        justify-content: center;
         display: flex;
       }
   
@@ -170,9 +169,11 @@ body {
       }
   
       #profileimg {
-        border-radius: 50%;
+        border-radius: 25%;
         padding: 0px 20px 20px 20px;
         justify-content: center;
+        height: auto;
+        width: 300px;
       }
   
       .centerimg {
